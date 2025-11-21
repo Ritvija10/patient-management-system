@@ -1,0 +1,163 @@
+
+
+:root{
+  --dark-blue: #0A1D56;
+  --white: #ffffff;
+  --card-width: 420px;
+  --strip-opacity: 0.8;
+}
+
+
+.page {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark-blue {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+
+.strip {
+  position: absolute;
+  background: var(--white);
+  opacity: var(--strip-opacity);
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+.strip.horizontal {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 28px; 
+  width: 100%;
+}
+.strip.vertical {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 28px; 
+  height: 100%;
+}
+
+
+.card {
+  background: var(--white);
+  color: #000;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+
+.form-card {
+  width: var(--card-width);
+  max-width: calc(100% - 40px);
+}
+
+
+.title {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 22px;
+}
+.title.white {
+  color: var(--white);
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form-row {
+  margin-bottom: 12px;
+}
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn.primary {
+  background: var(--dark-blue);
+  color: white;
+  margin-top: 8px;
+}
+
+.padded {
+  padding: 40px;
+  box-sizing: border-box;
+}
+.content-wrapper {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  z-index: 2;
+}
+.list {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+
+.record-card {
+  padding: 14px;
+}
+.record-name {
+  margin: 0 0 6px 0;
+}
+
+
+.nav {
+  background: #f2f2f2;
+  padding: 10px 0;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+.nav-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+.nav-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #111;
+}
+.delete-btn {
+  background: #b30000;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-btn:hover {
+  background: #ff1a1a;
+}
